@@ -1,394 +1,376 @@
 <!DOCTYPE html>
-<HTml lang="es">
+<html lang="es">
+
 <head>
-<html lang="
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APSTI Dashboard - Diseño Responsive</title>
-    <!--Vinculación a CSS-->
-    <link rel="stylesheet" href="style.css">
-        
-</head>
-<body>
-    <div class="wrapper">
-        <!-- HEADER -->
-        <header class="main-head">
-            <div class="logo">APSTI <span>Dashboard</span></div>
-            <div class="user-info">
-                <div class="avatar">HC</div>
-                <span>Damil HC</span>
-                <button class="menu-toggle">☰ Menú</button>
-            </div>
-        </header>
 
-        <!-- NAVEGACIÓN -->
-        <nav class="main-nav">
-            <ul>
-               <li><a href="#inicio" class="nav-link active" data-section="inicio"><i class="fas fa-chart-line"></i> Inicio</a></li>
-                <li><a href="#proyectos" class="nav-link" data-section="proyectos"><i class="fas fa-folder-open"></i> Proyectos</a></li>
-                <li><a href="#tareas" class="nav-link" data-section="tareas"><i class="fas fa-check-circle"></i> Tareas</a></li>
-                <li><a href="#equipo" class="nav-link" data-section="equipo"><i class="fas fa-users"></i> Equipo</a></li>
-                <li><a href="#reportes" class="nav-link" data-section="reportes"><i class="fas fa-chart-bar"></i> Reportes</a></li>
-                <li><a href="#config" class="nav-link" data-section="config"><i class="fas fa-cog"></i> Configuración</a></li>
+    <title>Alessandra H. Cassano | Portafolio</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+    <!-- ==================== NAV ==================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                ALESSANDRA
+            </div>
+
+            <ul class="menu">
+
+                <li><a href="#inicio">Inicio</a></li>
+
+                <li><a href="#sobre">Sobre mí</a></li>
+
+                <li><a href="#fortalezas">Fortalezas</a></li>
+
+                <li><a href="#habilidades">Herramientas</a></li>
+
+                <li><a href="#proyectos">Proyectos</a></li>
+
+                <li><a href="#contacto">Contacto</a></li>
+
             </ul>
+
         </nav>
 
-        <!-- CONTENIDO PRINCIPAL -->
-        <article class="content" id="contentArea">
-            <h1>Diseño Responsive con CSS</h1>
-            <p class="subtitle">Implementación de Flexbox y CSS Grid para interfaces adaptables</p>
+    </header>
 
-        <!-- Notificación Toast -->
-            <div id="toastContainer" class="toast-container"></div>
+    <!-- ==================== PORTADA ==================== -->
 
-            <!-- Tarjetas informativas -->
-            <div class="cards-grid" id="cardsGrid" >
-                <div class="card" data-card="grid">
-                    <div class="card-icon">📐<i class="fas fa-th"></i></div> 
-                    <h3>CSS Grid Layout</h3>
-                    <p>Sistema de layout bidimensional que permite controlar filas y columnas simultáneamente. Ideal para estructuras de página complejas.</p>
-                    <div class="card-footer">
-                        <span class="badge">2D Layout</span>
-                        <span class="card-status"><i class="fas fa-check-circle"></i> Moderno</span>
-                    </div>
-                    <div class="card-actions">
-                        <button class="btn-card-action" data-action="details" title="Ver detalles"><i class="fas fa-eye"></i></button>
-                        <button class="btn-card-action" data-action="copy" title="Copiar código"><i class="fas fa-copy"></i></button>
-                        <button class="btn-card-action" data-action="favorite" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
-                    </div>
-                </div>
+    <section id="inicio" class="hero">
 
-                <div class="card" data-card="flexbox">
-                    <div class="card-icon">↔<i class="fas fa-arrows-alt-h"></i></div>
-                    <h3>CSS Flexbox</h3>
-                    <p>Modelo de layout unidimensional para distribución de elementos en una sola dirección (fila o columna). Perfecto para componentes.</p>
-                    <div class="card-footer">
-                        <span class="badge">1D Layout</span>
-                        <span class="card-status"><i class="fas fa-check-circle"></i> Flexible</span>
-                    </div>
-                    <div class="card-actions">
-                        <button class="btn-card-action" data-action="details" title="Ver detalles"><i class="fas fa-eye"></i></button>
-                        <button class="btn-card-action" data-action="copy" title="Copiar código"><i class="fas fa-copy"></i></button>
-                        <button class="btn-card-action" data-action="favorite" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
-                    </div>
-                </div>
+        <img src="img/portada.jpg" alt="Portada" class="hero-img">
 
-                <div class="card" data-card="media">
-                    <div class="card-icon">📱<i class="fas fa-mobile-alt"></i></div>
-                    <h3>Media Queries</h3>
-                    <p>Reglas CSS que aplican estilos según características del dispositivo. Permiten adaptar layouts a diferentes resoluciones de pantalla.</p>
-                    <div class="card-footer">
-                        <span class="badge">Responsive</span>
-                        <span class="card-status"><i class="fas fa-check-circle"></i> Adaptativo</span>
-                    </div>
-                    <div class="card-actions">
-                        <button class="btn-card-action" data-action="details" title="Ver detalles"><i class="fas fa-eye"></i></button>
-                        <button class="btn-card-action" data-action="copy" title="Copiar código"><i class="fas fa-copy"></i></button>
-                        <button class="btn-card-action" data-action="favorite" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
-                    </div>
-                </div>
+        <div class="overlay">
 
-                <div class="card" data-card="mobile">
-                    <div class="card-icon">🎯<i class="fas fa-bullseye"></i></div>
-                    <h3>Mobile First</h3>
-                    <p>Enfoque de diseño que prioriza la experiencia móvil. Se parte de la versión móvil y se expande progresivamente para pantallas mayores.</p>
-                    <div class="card-footer">
-                        <span class="badge">Estrategia</span>
-                        <span class="card-status"><i class="fas fa-check-circle"></i> UX/UI</span>
-                    </div>
-                    <div class="card-actions">
-                        <button class="btn-card-action" data-action="details" title="Ver detalles"><i class="fas fa-eye"></i></button>
-                        <button class="btn-card-action" data-action="copy" title="Copiar código"><i class="fas fa-copy"></i></button>
-                        <button class="btn-card-action" data-action="favorite" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
-                    </div>
-                </div>
-            </div>
+            <h1 class="nombre">
 
-            <!-- Galería de tecnologías -->
-             <h3 class="section-title">Tecnologías Aplicadas</h3>
-            <div class="gallery" id="techGallery">
-                <div class="gallery-item" data-tech="html5">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML5</span>
-                    <div class="gallery-overlay">
-                        <p>Estructura semántica moderna</p>
-                        <button class="btn-gallery-info"><i class="fas fa-info-circle"></i> Info</button>
-                    </div>
-                </div>
-                <div class="gallery-item" data-tech="css3">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS3</span>
-                    <div class="gallery-overlay">
-                        <p>Estilos avanzados y animaciones</p>
-                        <button class="btn-gallery-info"><i class="fas fa-info-circle"></i> Info</button>
-                    </div>
-                </div>
-                <div class="gallery-item" data-tech="grid">
-                    <i class="fas fa-th"></i>
-                    <span>Grid</span>
-                    <div class="gallery-overlay">
-                        <p>Layout bidimensional potente</p>
-                        <button class="btn-gallery-info"><i class="fas fa-info-circle"></i> Info</button>
-                    </div>
-                </div>
-                <div class="gallery-item" data-tech="flexbox">
-                    <i class="fas fa-arrows-alt-h"></i>
-                    <span>Flexbox</span>
-                    <div class="gallery-overlay">
-                        <p>Distribución flexible de elementos</p>
-                        <button class="btn-gallery-info"><i class="fas fa-info-circle"></i> Info</button>
-                    </div>
-                </div>
-                <div class="gallery-item" data-tech="media">
-                    <i class="fas fa-desktop"></i>
-                    <span>Media Q</span>
-                    <div class="gallery-overlay">
-                        <p>Adaptación a dispositivos</p>
-                        <button class="btn-gallery-info"><i class="fas fa-info-circle"></i> Info</button>
-                    </div>
-                </div>
-                <div class="gallery-item" data-tech="rem">
-                    <i class="fas fa-ruler"></i>
-                    <span>Rem/Em</span>
-                    <div class="gallery-overlay">
-                        <p>Unidades relativas escalables</p>
-                        <button class="btn-gallery-info"><i class="fas fa-info-circle"></i> Info</button>
-                    </div>
-                </div>
-            </div>
+                ALESSANDRA
+                <br>
+                CASSANO
 
-            <!-- Sección de Calculadora Responsive -->
-            <h3 class="section-title"><i class="fas fa-calculator"></i> Calculadora de Breakpoints</h3>
-            <div class="calculator-section">
-                <p class="calc-desc">Ingresa el ancho de pantalla en píxeles para ver qué breakpoint CSS se activa:</p>
-                <div class="calc-input-group">
-                    <input type="number" id="breakpointInput" placeholder="Ej: 768" min="0" max="5000">
-                    <button id="calcBreakpoint" class="btn-calc"><i class="fas fa-search"></i> Calcular</button>
-                </div>
-                <div id="breakpointResult" class="breakpoint-result"></div>
-            </div>
+            </h1>
 
-            <!-- Sección de Formulario de Contacto -->
-            <h3 class="section-title"><i class="fas fa-envelope"></i> Formulario de Contacto</h3>
-            <div class="contact-section">
-                <p class="contact-desc">¿Tienes dudas sobre el curso? Envíanos un mensaje y te responderemos a la brevedad.</p>
+            <p>
 
-                <form id="contactForm" class="contact-form" novalidate>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="nombre"><i class="fas fa-user"></i> Nombre completo <span class="required">*</span></label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
-                            <span class="error-message" id="error-nombre"><i class="fas fa-exclamation-circle"></i> Este campo es obligatorio</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email"><i class="fas fa-envelope"></i> Correo electrónico <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-                            <span class="error-message" id="error-email"><i class="fas fa-exclamation-circle"></i> Ingresa un correo válido</span>
-                        </div>
-                    </div>
+                Técnica en Arquitectura de Plataformas y Servicios TI
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="telefono"><i class="fas fa-phone"></i> Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="+51 999 888 777">
-                        </div>
-                        <div class="form-group">
-                            <label for="asunto"><i class="fas fa-tag"></i> Asunto <span class="required">*</span></label>
-                            <select id="asunto" name="asunto" required>
-                                <option value="" disabled selected>Selecciona un asunto</option>
-                                <option value="consulta">Consulta general</option>
-                                <option value="soporte">Soporte técnico</option>
-                                <option value="inscripcion">Inscripción al curso</option>
-                                <option value="proyecto">Entrega de proyecto</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                            <span class="error-message" id="error-asunto"><i class="fas fa-exclamation-circle"></i> Selecciona un asunto</span>
-                        </div>
-                    </div>
-
-                    <div class="form-group full-width">
-                        <label for="mensaje"><i class="fas fa-comment-alt"></i> Mensaje <span class="required">*</span></label>
-                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." maxlength="500" required></textarea>
-                        <div class="char-counter"><span id="charCount">0</span> / 500 caracteres</div>
-                        <span class="error-message" id="error-mensaje"><i class="fas fa-exclamation-circle"></i> El mensaje es obligatorio (mín. 10 caracteres)</span>
-                    </div>
-
-                    <div class="form-group full-width">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="privacidad" name="privacidad" required>
-                            <span class="checkmark"></span>
-                            <span class="checkbox-text">Acepto la <a href="#" class="link-privacidad">política de privacidad</a> y el tratamiento de mis datos <span class="required">*</span></span>
-                        </label>
-                        <span class="error-message" id="error-privacidad"><i class="fas fa-exclamation-circle"></i> Debes aceptar la política de privacidad</span>
-                    </div>
-
-                    <div class="form-actions">
-                        <button type="submit" class="btn-submit" id="btnSubmit">
-                            <span class="btn-text"><i class="fas fa-paper-plane"></i> Enviar mensaje</span>
-                            <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Enviando...</span>
-                        </button>
-                        <button type="reset" class="btn-reset" id="btnReset"><i class="fas fa-undo"></i> Limpiar</button>
-                    </div>
-                </form>
-
-                <!-- Resumen de envío exitoso -->
-                <div id="successMessage" class="success-message" style="display:none;">
-                    <div class="success-icon"><i class="fas fa-check-circle"></i></div>
-                    <h4>¡Mensaje enviado con éxito!</h4>
-                    <p>Hemos recibido tu mensaje. Te responderemos dentro de las próximas 24 horas.</p>
-                    <div class="success-details" id="successDetails"></div>
-                    <button class="btn-new-message" id="btnNewMessage"><i class="fas fa-plus"></i> Enviar otro mensaje</button>
-                </div>
-            </div>
-        </article>
-
-        <!-- SIDEBAR -->
-        <aside class="side">
-            <h3><i class="fas fa-chart-pie"></i> Estadísticas del Curso</h3>
-
-            <div class="stat-item">
-                <span>Sesiones completadas</span>
-                <span class="stat-value" id="statSesiones">8/20</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressSesiones" style="width: 40%;"></div>
-            </div>
-
-            <div class="stat-item" style="margin-top: 1rem;">
-                <span>Prácticas entregadas</span>
-                <span class="stat-value" id="statPracticas">6/8</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressPracticas" style="width: 75%;"></div>
-            </div>
-
-            <div class="stat-item" style="margin-top: 1rem;">
-                <span>Proyecto final</span>
-                <span class="stat-value" id="statProyecto">25%</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressProyecto" style="width: 25%;"></div>
-            </div>
-
-            <!-- Widget de clima / estado -->
-            <div class="widget-status">
-                <h3><i class="fas fa-clock"></i> Estado del Sistema</h3>
-                <div class="status-indicator active">
-                    <span class="status-dot"></span>
-                    <span class="status-text">Plataforma activa</span>
-                </div>
-                <div class="status-time" id="systemTime">--:--</div>
-                <div class="status-date" id="systemDate">--/--/----</div>
-            </div>
-
-            <h3 style="margin-top: 2rem;"><i class="fas fa-calendar-alt"></i> Próximas Sesiones</h3>
-            <div class="session-list" id="sessionList">
-                <div class="session-item" data-session="9">
-                    <div class="session-number">09</div>
-                    <div class="session-info">
-                        <span class="session-title">Frameworks CSS</span>
-                        <span class="session-date"><i class="far fa-clock"></i> 02 Jun 2026</span>
-                    </div>
-                    <button class="btn-reminder" title="Recordarme"><i class="far fa-bell"></i></button>
-                </div>
-                <div class="session-item" data-session="10">
-                    <div class="session-number">10</div>
-                    <div class="session-info">
-                        <span class="session-title">Animaciones CSS</span>
-                        <span class="session-date"><i class="far fa-clock"></i> 04 Jun 2026</span>
-                    </div>
-                    <button class="btn-reminder" title="Recordarme"><i class="far fa-bell"></i></button>
-                </div>
-                <div class="session-item" data-session="11">
-                    <div class="session-number">11</div>
-                    <div class="session-info">
-                        <span class="session-title">Preprocesadores</span>
-                        <span class="session-date"><i class="far fa-clock"></i> 09 Jun 2026</span>
-                    </div>
-                    <button class="btn-reminder" title="Recordarme"><i class="far fa-bell"></i></button>
-                </div>
-            </div>
-
-            <!-- Widget de notas rápidas -->
-            <div class="widget-notes">
-                <h3><i class="fas fa-sticky-note"></i> Notas Rápidas</h3>
-                <div class="notes-input-group">
-                    <input type="text" id="noteInput" placeholder="Escribe una nota..." maxlength="60">
-                    <button id="btnAddNote"><i class="fas fa-plus"></i></button>
-                </div>
-                <ul class="notes-list" id="notesList">
-                    <li class="note-item">
-                        <span class="note-text">Revisar documentación de Grid</span>
-                        <button class="btn-delete-note"><i class="fas fa-times"></i></button>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-
-        <!-- FOOTER -->
-        <footer class="main-footer">
-            <div class="footer-links">
-               <a href="#" class="footer-link" data-modal="politicas"><i class="fas fa-shield-alt"></i> Políticas</a>
-                <a href="#" class="footer-link" data-modal="terminos"><i class="fas fa-file-contract"></i> Términos</a>
-                <a href="#" class="footer-link" data-modal="contacto"><i class="fas fa-envelope"></i> Contacto</a>
-                <a href="#" class="footer-link" data-modal="soporte"><i class="fas fa-headset"></i> Soporte</a>
-            </div>
-            <p class="footer-copy">
-                <i class="far fa-copyright"></i> 2026 Instituto Luis Felipe de las Casas Grieve — Arquitectura de Plataformas y Servicios de TI
             </p>
-            <div class="footer-social">
-                <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-            </div>
-        </footer>
-    </div>
 
-    <!-- Modal para detalles -->
-    <div id="detailModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="modalTitle">Detalles</h3>
-                <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body" id="modalBody"></div>
-            <div class="modal-footer">
-                <button class="btn-modal-close" id="btnModalClose">Cerrar</button>
-            </div>
+            <span>
+
+                Diseño Digital • Multimedia • Tecnología
+
+            </span>
+
         </div>
-    </div>
 
-    <!-- Modal para políticas -->
-    <div id="policyModal" class="modal">
-        <div class="modal-content modal-policy">
-            <div class="modal-header">
-                <h3><i class="fas fa-shield-alt"></i> Política de Privacidad</h3>
-                <button class="modal-close" id="policyModalClose"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <p>En APSTI Dashboard, nos comprometemos a proteger tu información personal. Los datos que proporciones a través del formulario de contacto serán utilizados únicamente para responder a tus consultas y brindarte soporte relacionado con el curso.</p>
-                <ul>
-                    <li><strong>Recopilación:</strong> Solo solicitamos datos necesarios (nombre, email, asunto y mensaje).</li>
-                    <li><strong>Uso:</strong> Tus datos no serán compartidos con terceros sin tu consentimiento.</li>
-                    <li><strong>Almacenamiento:</strong> La información se conserva de forma segura durante el tiempo necesario.</li>
-                    <li><strong>Derechos:</strong> Puedes solicitar la eliminación de tus datos en cualquier momento.</li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button class="btn-modal-close" id="btnPolicyClose">Entendido</button>
-            </div>
+    </section>
+
+    <!-- ==================== SOBRE MI ==================== -->
+
+    <section id="sobre" class="sobre">
+
+        <div class="texto">
+
+            <h2>Sobre mí</h2>
+
+            <h3>
+                Alessandra H. Cassano
+            </h3>
+
+            <p>
+
+                Técnica en Arquitectura de Plataformas y Servicios de Tecnologías de la Información,
+                orientada al diseño digital, edición multimedia y desarrollo de soluciones tecnológicas.
+
+                Mi experiencia se ha enfocado principalmente en la creación de contenido visual,
+                campañas publicitarias y proyectos digitales que combinan creatividad y tecnología.
+
+            </p>
+
         </div>
-    </div>
 
-    <!-- Overlay de carga -->
-    <div id="loadingOverlay" class="loading-overlay" style="display:none;">
-        <div class="loading-spinner">
-            <i class="fas fa-circle-notch fa-spin"></i>
-            <span>Procesando...</span>
+        <div class="foto">
+
+            <img src="img/alessandra.png" alt="Alessandra">
+
         </div>
-    </div>
 
-    <script src="script.js"></script>
+    </section>
+
+    <!-- ==================== FORTALEZAS ==================== -->
+
+    <section id="fortalezas" class="fortalezas">
+
+        <h2>Fortalezas Profesionales</h2>
+
+        <div class="contenedor-fortalezas">
+
+            <div class="fortaleza">
+                <div class="circulo">💡</div>
+                <h3>Creatividad</h3>
+                <p>Desarrollo de ideas innovadoras y soluciones visuales.</p>
+            </div>
+
+            <div class="fortaleza">
+                <div class="circulo">🤝</div>
+                <h3>Trabajo en Equipo</h3>
+                <p>Colaboración efectiva en proyectos multidisciplinarios.</p>
+            </div>
+
+            <div class="fortaleza">
+                <div class="circulo">🗣</div>
+                <h3>Comunicación Efectiva</h3>
+                <p>Capacidad para transmitir ideas de manera clara y profesional.</p>
+            </div>
+
+            <div class="fortaleza">
+                <div class="circulo">🧠</div>
+                <h3>Pensamiento Analítico</h3>
+                <p>Análisis y evaluación de información para la toma de decisiones.</p>
+            </div>
+
+            <div class="fortaleza">
+                <div class="circulo">🔍</div>
+                <h3>Resolución de Problemas</h3>
+                <p>Identificación de desafíos y búsqueda de soluciones eficientes.</p>
+            </div>
+
+            <div class="fortaleza">
+                <div class="circulo">📚</div>
+                <h3>Aprendizaje Continuo</h3>
+                <p>Interés constante por adquirir nuevos conocimientos.</p>
+            </div>
+
+            <div class="fortaleza">
+                <div class="circulo">📋</div>
+                <h3>Organización</h3>
+                <p>Planificación eficiente de actividades y proyectos.</p>
+            </div>
+
+            <div class="fortaleza">
+                <div class="circulo">🔄</div>
+                <h3>Adaptabilidad</h3>
+                <p>Facilidad para ajustarse a nuevos entornos y desafíos.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==================== HERRAMIENTAS ==================== -->
+
+    <section id="habilidades" class="habilidades">
+
+        <h2>Herramientas y Tecnologías</h2>
+
+        <p class="subtitulo">
+
+            Software y plataformas utilizadas en proyectos de desarrollo,
+            diseño y producción multimedia.
+
+        </p>
+
+        <!-- Desarrollo -->
+
+        <div class="categoria">
+
+            <h3>💻 Desarrollo</h3>
+
+            <div class="grupo-skills">
+
+                <div class="skill-card"
+                    data-info="Desarrollo de aplicaciones, sistemas y gestión de bases de datos.">
+                    Visual Studio
+                </div>
+
+                <div class="skill-card"
+                    data-info="Desarrollo web con HTML, CSS y JavaScript.">
+                    VS Code
+                </div>
+
+                <div class="skill-card"
+                    data-info="Diseño y administración de bases de datos relacionales.">
+                    MySQL
+                </div>
+
+                <div class="skill-card"
+                    data-info="Creación de entornos virtuales para pruebas y aprendizaje.">
+                    VirtualBox
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Diseño -->
+
+        <div class="categoria">
+
+            <h3>🎨 Diseño</h3>
+
+            <div class="grupo-skills">
+
+                <div class="skill-card"
+                    data-info="Diseño de interfaces, prototipos y experiencia de usuario.">
+                    Figma
+                </div>
+
+                <div class="skill-card"
+                    data-info="Diseño de contenido visual para redes sociales y campañas.">
+                    Canva
+                </div>
+
+                <div class="skill-card"
+                    data-info="Diseño gráfico e identidad visual.">
+                    CorelDRAW
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Multimedia -->
+
+        <div class="categoria">
+
+            <h3>🎬 Multimedia</h3>
+
+            <div class="grupo-skills">
+
+                <div class="skill-card"
+                    data-info="Edición y producción de contenido audiovisual.">
+                    Adobe Premiere
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==================== PROYECTOS ==================== -->
+
+    <section id="proyectos" class="proyectos">
+
+        <h2>Proyectos Destacados</h2>
+
+        <p class="intro">
+
+            Mi experiencia se ha enfocado principalmente en diseño digital,
+            edición multimedia y desarrollo de soluciones tecnológicas.
+
+        </p>
+
+        <div class="contenedor-proyectos">
+
+            <div class="card">
+
+                <img src="img/video.jpg" alt="Proyecto Video">
+
+                <div class="contenido">
+
+                    <h3>Edición y Producción Audiovisual</h3>
+
+                    <p>
+
+                        Producción y edición de contenido audiovisual
+                        utilizando herramientas profesionales.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="img/bd.jpg" alt="Proyecto Base de Datos">
+
+                <div class="contenido">
+
+                    <h3>Sistema de Gestión de Base de Datos</h3>
+
+                    <p>
+
+                        Desarrollo de una solución utilizando
+                        Visual Studio y MySQL.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="img/campaña.jpg" alt="Proyecto Campaña">
+
+                <div class="contenido">
+
+                    <h3>Diseño de Campaña Publicitaria</h3>
+
+                    <p>
+
+                        Creación de piezas gráficas, flyers y material promocional.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==================== CONTACTO ==================== -->
+
+    <section id="contacto" class="contacto">
+
+        <h2>Gracias por visitar mi portafolio</h2>
+
+        <p>
+
+            Si deseas conocer más detalles sobre el desarrollo, código o
+            arquitectura de los proyectos presentados, o tienes alguna
+            oportunidad laboral o de colaboración, no dudes en contactarme.
+
+        </p>
+
+        <div class="datos">
+
+            <p>📧 alessandrahc@gmail.com</p>
+
+            <p>📱 900784024</p>
+
+            <p>📸 @alehc26</p>
+
+        </div>
+
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer class="footer">
+
+        © 2026 Alessandra H. Cassano | Portafolio Profesional
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>
+```
